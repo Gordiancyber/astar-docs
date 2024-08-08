@@ -1,4 +1,4 @@
-
+---
 
 # Astar Network Documentation
 
@@ -11,8 +11,9 @@ This project aims to provide a well-structured, version-controlled, and automati
 ## Table of Contents
 
 - [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Automated Deployment](#automated-deployment)
+- [Forking the Project](#forking-the-project)
+- [Documentation Structure](#documentation-structure)
+- [Deployment](#deployment)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -28,25 +29,29 @@ To get a local copy up and running, follow these steps:
 
 ### Installation
 
-1. Clone the repository:
+1. **Fork the repository**: Fork the Astar Network documentation repository on GitHub to your own account by clicking the "Fork" button on the repository's page.
+
+2. **Clone your forked repository**:
 
     ```sh
-    git clone https://github.com/<USERNAME>/<REPO_NAME>.git
+    git clone https://github.com/<YOUR_USERNAME>/<REPO_NAME>.git
     ```
 
-2. Navigate to the project directory:
+    Replace `<YOUR_USERNAME>` with your GitHub username and `<REPO_NAME>` with the name of the repository.
+
+3. **Navigate to the project directory**:
 
     ```sh
     cd <REPO_NAME>
     ```
 
-3. Install the dependencies:
+4. **Install the dependencies**:
 
     ```sh
     npm install
     ```
 
-4. Start the development server:
+5. **Start the development server**:
 
     ```sh
     npm start
@@ -54,9 +59,37 @@ To get a local copy up and running, follow these steps:
 
     This will start the local development server and open the documentation site in your default web browser.
 
-## Project Structure
+## Forking the Project
 
-The project structure follows the Docusaurus convention:
+To contribute to the Astar Network documentation, you need to fork the project. Here’s how you can do that:
+
+1. **Fork the Repository**: Go to the Astar Network documentation repository on GitHub. Click on the "Fork" button in the top-right corner. This will create a copy of the repository under your GitHub account.
+
+2. **Clone Your Fork**: After forking, clone the repository to your local machine:
+
+    ```sh
+    git clone https://github.com/<YOUR_USERNAME>/<REPO_NAME>.git
+    ```
+
+3. **Add Upstream Remote**: To keep your forked repository in sync with the original repository, you need to add an "upstream" remote:
+
+    ```sh
+    git remote add upstream https://github.com/<ORIGINAL_USERNAME>/<REPO_NAME>.git
+    ```
+
+4. **Fetch Upstream Changes**: Before starting any work, always fetch the latest changes from the upstream repository:
+
+    ```sh
+    git fetch upstream
+    ```
+
+5. **Create a New Branch**: Always create a new branch for your changes:
+
+    ```sh
+    git checkout -b <BRANCH_NAME>
+    ```
+
+## Documentation Structure
 
 ```
 .
@@ -79,9 +112,9 @@ The project structure follows the Docusaurus convention:
 - `docusaurus.config.js`: Configuration file for Docusaurus.
 - `.github/workflows/deploy.yml`: GitHub Actions workflow for automated deployment.
 
-## Automated Deployment
+## Deployment
 
-The documentation site is automatically deployed to GitHub Pages whenever changes are merged into the `main` branch. This is achieved using GitHub Actions.
+The documentation site is automatically deployed to GitHub Pages whenever changes are merged into the main branch. This is achieved using GitHub Actions.
 
 ### Step-by-Step Guide
 
@@ -150,7 +183,7 @@ The documentation site is automatically deployed to GitHub Pages whenever change
 
 4. **Merge PRs to Main Branch**
 
-    Once the workflow is set up, any changes merged into the `main` branch will trigger the GitHub Actions workflow. The workflow will build your Docusaurus site and deploy it to GitHub Pages automatically.
+    Once the workflow is set up, any changes merged into the main branch will trigger the GitHub Actions workflow. The workflow will build your Docusaurus site and deploy it to GitHub Pages automatically.
 
 ## Contributing
 
@@ -164,8 +197,7 @@ Contributions are what make the open-source community such an amazing place to l
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+MIT License.
 
 ---
 
-Feel free to customize this README file according to your project's specific details and requirements.
